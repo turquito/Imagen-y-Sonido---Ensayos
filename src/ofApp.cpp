@@ -16,7 +16,7 @@ void ofApp::setup(){
 	vel = ofPoint(0,0);
 	// setemamos el fondo para que no se limpie
 	ofSetBackgroundAuto(false);
-	ofBackground(255, 255, 255);
+	ofBackground(50, 50, 50);
 	
 }
 
@@ -27,7 +27,7 @@ void ofApp::update(){
 		// arranca el sample a tocar
 		sound.play();
 		// setea la velocidad de reproduccion en funcion de x
-		float speed = ofMap(pos.x, 0, ofGetWidth(), 0.2, 0);
+		float speed = ofMap(pos.x, 0, ofGetWidth(), 1, 1.5);
 		sound.setSpeed(speed);
 	}
 	//update sound engine
@@ -37,7 +37,7 @@ void ofApp::update(){
 void ofApp::draw(){
 	float bottom = ofGetHeight() -100; // the floor position on the screen
 	// dibuja la linea del piso
-	ofSetColor(0, 0, 0);
+	ofSetColor(255, 255, 255);
 	ofDrawLine(0, bottom, ofGetWidth(), bottom);
 	//dibujo la pelota
 	ofSetColor(255, 0, 0);
