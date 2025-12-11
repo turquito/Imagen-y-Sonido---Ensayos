@@ -9,6 +9,10 @@ class ofApp : public ofBaseApp{
 		void update() override;
 		void draw() override;
 		void exit() override;
+	
+	bool updateBall();     // move ball function
+	
+	ofSoundPlayer sound; // sample
 
 		void keyPressed(int key) override;
 		void keyReleased(int key) override;
